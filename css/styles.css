@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 
-#contenido {
+.contenido {
     max-width: 800px;
     margin: 2em auto 0 auto;
     padding: 20px;
@@ -38,14 +38,14 @@ tr:hover {
 }
 
 /* Devoluciones */
-#devoluciones {
+.contenido {
     width: min( 80rem, 100% );
     display: inline-block;
 }
 
 
 @media (min-width: 768px) {
-    #devoluciones {
+    .contenido {
         margin: 4rem auto 10rem auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -53,16 +53,16 @@ tr:hover {
     }
 }
 
-.campoDevolucion {
+.campoFormulario {
     margin: 1rem 1rem 0 1rem;
 }
 
-.campoDevolucion label {
+.campoFormulario label {
     font-weight: bold;
     font-size: 1.2rem;
 }
 
-.campoDevolucion input {
+.campoFormulario input {
     width: 100%;
     border-top: none;
     border-left: none;
@@ -73,53 +73,53 @@ tr:hover {
     padding-left: .4rem;
 }
 
-.campoDevolucion input:focus{
+.campoFormulario input:focus{
     outline: none;
 }
 
-.campoDevolucion textarea {
+.campoFormulario textarea {
     width: 100%;
     border-radius: .2rem;
     height: 8rem;
     padding: .2rem 0 0 .4rem;
 }
 
-.campoDevolucion select {
+.campoFormulario select {
     width: 100%;
     margin-top: .4rem;
     height: 2.5rem;
     padding-left: .4rem;
 }
 
-.campoDevolucion:nth-child(1) {
+.campoFormulario:nth-child(1) {
     grid-column: 1 / 3;
 }
 
-.campoDevolucion:nth-child(2) {
+.campoFormulario:nth-child(2) {
     grid-column: 1 / 3;
 }
 
-.campoDevolucion:nth-child(3) {
+.campoFormulario:nth-child(3) {
     grid-column: 1 / 3;
 }
 
-.campoDevolucion:nth-child(4) {
+.campoFormulario:nth-child(4) {
     grid-column: 1 / 3;
 }
 
-.campoDevolucion:nth-child(5) {
+.campoFormulario:nth-child(5) {
     grid-column: 1 / 3;
 }
 
-.campoDevolucion:nth-child(6) {
+.campoFormulario:nth-child(6) {
     grid-column: 1 / 3;
 }
 
-.campoDevolucion:nth-child(7) {
+.campoFormulario:nth-child(7) {
     grid-column: 1 / 3;
 }
 
-#botonesDevolucion {
+.botonesFormulario {
     margin: 2rem 0 0 0;
     display: flex;
     flex-direction: column;
@@ -128,13 +128,13 @@ tr:hover {
 }
 
 @media (min-width: 768px) {
-    #botonesDevolucion {
+    .botonesFormulario {
         margin: 2rem 0 0 0;
         flex-direction: row;
     }
 }
 
-#btn-submit {
+.btn-submit {
     background-color: rgb(72, 79, 163);
     padding: .8rem;
     border-radius: .5rem;
@@ -144,16 +144,16 @@ tr:hover {
     font-size: 1.5rem;
 }
 
-#btn-submit:hover {
+.btn-submit:hover {
     cursor: pointer;
     background-color: rgb(85, 92, 174);
 }
 
-#btn-submit:active {
+.btn-submit:active {
     transform: scale(0.98);
 }
 
-#btn-limpiar {
+.btn-limpiar {
     background-color: rgb(233, 63, 41);
     padding: .8rem;
     border-radius: .5rem;
@@ -165,485 +165,20 @@ tr:hover {
 }
 
 @media (min-width: 768px) {
-    #btn-limpiar {
+    .btn-limpiar {
         margin-left: 6rem;
     }
 
-    #btn-submit {
+    .btn-submit {
         margin-left: 1rem;
     }
 }
 
-#btn-limpiar:hover {
+.btn-limpiar:hover {
     cursor: pointer;
     background-color: rgb(232, 82, 62);
 }
 
-#btn-limpiar:active {
-    transform: scale(0.98);
-}
-
-/* DevolucionesDeporte */
-
-#contenidoDeporte {
-    max-width: 800px;
-    margin: 2em auto 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#devolucionesDeporte {
-    width: min( 80rem, 100% );
-    display: inline-block;
-}
-
-
-@media (min-width: 768px) {
-    #devolucionesDeporte {
-        margin: 4rem auto 10rem auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 2rem;
-    }
-}
-
-.campoDevolucionDeporte {
-    margin: 1rem 1rem 0 1rem;
-}
-
-.campoDevolucionDeporte label {
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.campoDevolucionDeporte input {
-    width: 100%;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    background-color: rgb(249, 249, 249);
-    margin-top: .4rem;
-    height: 2.5rem;
-    padding-left: .4rem;
-}
-
-.campoDevolucionDeporte input:focus{
-    outline: none;
-}
-
-.campoDevolucionDeporte textarea {
-    width: 100%;
-    border-radius: .2rem;
-    height: 8rem;
-    padding: .2rem 0 0 .4rem;
-}
-
-.campoDevolucionDeporte select {
-    width: 100%;
-    margin-top: .4rem;
-    height: 2.5rem;
-    padding-left: .4rem;
-}
-
-.campoDevolucionDeporte:nth-child(1) {
-    grid-column: 1 / 3;
-}
-
-.campoDevolucionDeporte:nth-child(2) {
-    grid-column: 1 / 3;
-}
-
-.campoDevolucionDeporte:nth-child(3) {
-    grid-column: 1 / 3;
-}
-
-.campoDevolucionDeporte:nth-child(4) {
-    grid-column: 1 / 3;
-}
-
-.campoDevolucionDeporte:nth-child(5) {
-    grid-column: 1 / 3;
-}
-
-.campoDevolucionDeporte:nth-child(6) {
-    grid-column: 1 / 3;
-}
-
-.campoDevolucionDeporte:nth-child(7) {
-    grid-column: 1 / 3;
-}
-
-#botonesDevolucionDeporte {
-    margin: 2rem 0 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 1rem;
-}
-
-@media (min-width: 768px) {
-    #botonesDevolucionDeporte {
-        margin: 2rem 0 0 0;
-        flex-direction: row;
-    }
-}
-
-#btn-submit-deporte {
-    background-color: rgb(72, 79, 163);
-    padding: .8rem;
-    border-radius: .5rem;
-    color: white;
-    font-weight: bold;
-    border: none;
-    font-size: 1.5rem;
-}
-
-#btn-submit-deporte:hover {
-    cursor: pointer;
-    background-color: rgb(85, 92, 174);
-}
-
-#btn-submit-deporte:active {
-    transform: scale(0.98);
-}
-
-#btn-limpiar-deporte {
-    background-color: rgb(233, 63, 41);
-    padding: .8rem;
-    border-radius: .5rem;
-    color: white;
-    font-weight: bold;
-    border: none;
-    font-size: 1.5rem;
-    
-}
-
-@media (min-width: 768px) {
-    #btn-limpiar-deporte {
-        margin-left: 6rem;
-    }
-
-    #btn-submit-deporte {
-        margin-left: 1rem;
-    }
-}
-
-#btn-limpiar-deporte:hover {
-    cursor: pointer;
-    background-color: rgb(232, 82, 62);
-}
-
-#btn-limpiar-deporte:active {
-    transform: scale(0.98);
-}
-
-/* DevolucionesEspacioDeportivo */
-
-#contenidoEspacioDeportivo {
-    max-width: 800px;
-    margin: 2em auto 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#devolucionesEspacioDeportivo {
-    width: min( 80rem, 100% );
-    display: inline-block;
-}
-
-
-@media (min-width: 768px) {
-    #devolucionesEspacioDeportivo {
-        margin: 4rem auto 10rem auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 2rem;
-    }
-}
-
-.campoDevolucionEspacioDeportivo {
-    margin: 1rem 1rem 0 1rem;
-}
-
-.campoDevolucionEspacioDeportivo label {
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.campoDevolucionEspacioDeportivo input {
-    width: 100%;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    background-color: rgb(249, 249, 249);
-    margin-top: .4rem;
-    height: 2.5rem;
-    padding-left: .4rem;
-}
-
-.campoDevolucionEspacioDeportivo input:focus{
-    outline: none;
-}
-
-.campoDevolucionEspacioDeportivo textarea {
-    width: 100%;
-    border-radius: .2rem;
-    height: 8rem;
-    padding: .2rem 0 0 .4rem;
-}
-
-.campoDevolucionEspacioDeportivo select {
-    width: 100%;
-    margin-top: .4rem;
-    height: 2.5rem;
-    padding-left: .4rem;
-}
-
-.campoDevolucionEspacioDeportivo:nth-child(1) {
-    grid-column: 1 / 3;
-}
-
-.campoDevolucionEspacioDeportivo:nth-child(2) {
-    grid-column: 1 / 3;
-}
-
-.campoDevolucionEspacioDeportivo:nth-child(3) {
-    grid-column: 1 / 3;
-}
-
-.campoDevolucionEspacioDeportivo:nth-child(4) {
-    grid-column: 1 / 3;
-}
-
-.campoDevolucionEspacioDeportivo:nth-child(5) {
-    grid-column: 1 / 3;
-}
-
-.campoDevolucionEspacioDeportivo:nth-child(6) {
-    grid-column: 1 / 3;
-}
-
-.campoDevolucionEspacioDeportivo:nth-child(7) {
-    grid-column: 1 / 3;
-}
-
-#botonesDevolucionEspacioDeportivo {
-    margin: 2rem 0 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 1rem;
-}
-
-@media (min-width: 768px) {
-    #botonesDevolucionEspacioDeportivo {
-        margin: 2rem 0 0 0;
-        flex-direction: row;
-    }
-}
-
-#btn-submit-espaciodeportivo {
-    background-color: rgb(72, 79, 163);
-    padding: .8rem;
-    border-radius: .5rem;
-    color: white;
-    font-weight: bold;
-    border: none;
-    font-size: 1.5rem;
-}
-
-#btn-submit-espaciodeportivo:hover {
-    cursor: pointer;
-    background-color: rgb(85, 92, 174);
-}
-
-#btn-submit-espaciodeportivo:active {
-    transform: scale(0.98);
-}
-
-#btn-limpiar-espaciodeportivo {
-    background-color: rgb(233, 63, 41);
-    padding: .8rem;
-    border-radius: .5rem;
-    color: white;
-    font-weight: bold;
-    border: none;
-    font-size: 1.5rem;
-    
-}
-
-@media (min-width: 768px) {
-    #btn-limpiar-espaciodeportivo {
-        margin-left: 6rem;
-    }
-
-    #btn-submit-espaciodeportivo {
-        margin-left: 1rem;
-    }
-}
-
-#btn-limpiar-espaciodeportivo:hover {
-    cursor: pointer;
-    background-color: rgb(232, 82, 62);
-}
-
-#btn-limpiar-espaciodeportivo:active {
-    transform: scale(0.98);
-}
-
-/* DevolucionesRecomendacionMensaje */
-
-#contenidoRecomendacionMensaje {
-    max-width: 800px;
-    margin: 2em auto 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#devolucionesRecomendacionMensaje {
-    width: min( 80rem, 100% );
-    display: inline-block;
-}
-
-
-@media (min-width: 768px) {
-    #devolucionesRecomendacionMensaje {
-        margin: 4rem auto 10rem auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 2rem;
-    }
-}
-
-.campoDevolucionRecomendacionMensaje {
-    margin: 1rem 1rem 0 1rem;
-}
-
-.campoDevolucionRecomendacionMensaje label {
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.campoDevolucionRecomendacionMensaje input {
-    width: 100%;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    background-color: rgb(249, 249, 249);
-    margin-top: .4rem;
-    height: 2.5rem;
-    padding-left: .4rem;
-}
-
-.campoDevolucionRecomendacionMensaje input:focus{
-    outline: none;
-}
-
-.campoDevolucionRecomendacionMensaje textarea {
-    width: 100%;
-    border-radius: .2rem;
-    height: 8rem;
-    padding: .2rem 0 0 .4rem;
-}
-
-.campoDevolucionRecomendacionMensaje select {
-    width: 100%;
-    margin-top: .4rem;
-    height: 2.5rem;
-    padding-left: .4rem;
-}
-
-.campoDevolucionRecomendacionMensaje:nth-child(1) {
-    grid-column: 1 / 3;
-}
-
-.campoDevolucionRecomendacionMensaje:nth-child(2) {
-    grid-column: 1 / 3;
-}
-
-.campoDevolucionRecomendacionMensaje:nth-child(3) {
-    grid-column: 1 / 3;
-}
-
-.campoDevolucionRecomendacionMensaje:nth-child(4) {
-    grid-column: 1 / 3;
-}
-
-.campoDevolucionRecomendacionMensaje:nth-child(5) {
-    grid-column: 1 / 3;
-}
-
-.campoDevolucionRecomendacionMensaje:nth-child(6) {
-    grid-column: 1 / 3;
-}
-
-.campoDevolucionRecomendacionMensaje:nth-child(7) {
-    grid-column: 1 / 3;
-}
-
-#botonesDevolucionRecomendacionMensaje {
-    margin: 2rem 0 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 1rem;
-}
-
-@media (min-width: 768px) {
-    #botonesDevolucionRecomendacionMensaje {
-        margin: 2rem 0 0 0;
-        flex-direction: row;
-    }
-}
-
-#btn-submit-recomendacionmensaje {
-    background-color: rgb(72, 79, 163);
-    padding: .8rem;
-    border-radius: .5rem;
-    color: white;
-    font-weight: bold;
-    border: none;
-    font-size: 1.5rem;
-}
-
-#btn-submit-recomendacionmensaje:hover {
-    cursor: pointer;
-    background-color: rgb(85, 92, 174);
-}
-
-#btn-submit-recomendacionmensaje:active {
-    transform: scale(0.98);
-}
-
-#btn-limpiar-recomendacionmensaje {
-    background-color: rgb(233, 63, 41);
-    padding: .8rem;
-    border-radius: .5rem;
-    color: white;
-    font-weight: bold;
-    border: none;
-    font-size: 1.5rem;
-    
-}
-
-@media (min-width: 768px) {
-    #btn-limpiar-recomendacionmensaje {
-        margin-left: 6rem;
-    }
-
-    #btn-submit-recomendacionmensaje {
-        margin-left: 1rem;
-    }
-}
-
-#btn-limpiar-recomendacionmensaje:hover {
-    cursor: pointer;
-    background-color: rgb(232, 82, 62);
-}
-
-#btn-limpiar-recomendacionmensaje:active {
+.btn-limpiar:active {
     transform: scale(0.98);
 }

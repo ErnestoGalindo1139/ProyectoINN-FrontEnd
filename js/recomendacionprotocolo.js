@@ -1,10 +1,9 @@
-// TABLA USUARIOS
-// document.addEventListener("DOMContentLoaded", () => {
-const contenidoElement = document.getElementById("contenido");
+// Tabla EspacioDeportivo
+const contenidoElementRecomendacionProtocolo = document.getElementById("contenidoRecomendacionProtocolo");
 
-function cargarTabla() {
+function cargarTablaRecomendacionProtocolo() {
     // Hacer una solicitud GET a la API del backend
-    fetch('http://localhost:3000/api/usuario')
+    fetch('http://localhost:3000/api/recomendacionprotocolo')
         .then(response => response.json())
         .then(data => {
             // Crear una tabla para mostrar los datos
@@ -12,77 +11,64 @@ function cargarTabla() {
             table.innerHTML = `
                 <thead>
                     <tr>
-                        <th>Uio_Id</th>
-                        <th>Uio_Correo</th>
-                        <th>Uio_Contrasena</th>
+                        <th>RecoP_Id</th>
+                        <th>RecoP_Protocolo</th>
                     </tr>
                 </thead>
                 <tbody>
                     ${data.map(item => `
                     <tr>
-                        <td>${item.Uio_Id}</td>
-                        <td>${item.Uio_Correo}</td>
-                        <td>${item.Uio_Contrasena}</td>
+                        <td>${item.RecoP_Id}</td>
+                        <td>${item.RecoP_Protocolo}</td>
                     </tr>
                     `).join('')}
                 </tbody>
             `;
             
             // Reemplazar el contenido anterior con la nueva tabla
-            contenidoElement.innerHTML = '';
-            contenidoElement.appendChild(table);
+            contenidoElementRecomendacionProtocolo.innerHTML = '';
+            contenidoElementRecomendacionProtocolo.appendChild(table);
         })
         .catch(error => {
             console.error('Error al obtener datos del backend:', error);
-            contenidoElement.innerHTML = 'Error al obtener datos del backend';
+            contenidoElementRecomendacionProtocolo.innerHTML = 'Error al obtener datos del backend';
         });
 }
 
-    // Cargar la tabla al inicio
-    
-
-document.getElementById("usuario").addEventListener("submit", function(event) {
+document.getElementById("recomendacionProtocolo").addEventListener("submit", function(event) {
     event.preventDefault();
 
     // Captura los valores de los campos
-    const nombre = document.getElementById("nombreUsuario").value;
-    const email = document.getElementById("emailUsuario").value;
-    const password = document.getElementById("passwordUsuario").value;
+    const nombreRecomendacionProtocolo = document.getElementById("nombreRecomendacionProtocolo").value;
 
     // Crea un objeto con los datos que se enviarán a la API
-    const userData = {
-        Uio_Nombre: nombre,
-        Uio_Correo: email,
-        Uio_Contrasena: password
+    const EspacioRecomendacionProtocolo = {
+        RecoP_Protocolo: nombreRecomendacionProtocolo
     };
 
     // Realiza una solicitud POST a la API utilizando fetch
-    fetch("http://localhost:3000/api/usuario", {
+    fetch("http://localhost:3000/api/recomendacionprotocolo", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(userData)
+        body: JSON.stringify(EspacioRecomendacionProtocolo)
     })
     .then(response => response.json())
     .then(data => {
         console.log("Respuesta de la API:", data);
 
         // Si la inserción fue exitosa, vacía los campos
-        document.getElementById("nombreUsuario").value = "";
-        document.getElementById("emailUsuario").value = "";
-        document.getElementById("passwordUsuario").value = "";
+        document.getElementById("nombreRecomendacionProtocolo").value = "";
 
         alert("Datos enviados correctamente");
         
         // Actualizar la tabla con los nuevos datos
-        cargarTabla();
+        cargarTablaRecomendacionProtocolo();
     })
     .catch(error => {
         console.error("Error al enviar los datos:", error);
         alert("Ocurrió un error al enviar los datos");
     });
-    cargarTabla();
+    cargarTablaRecomendacionProtocolo();
 });
-
-// });
