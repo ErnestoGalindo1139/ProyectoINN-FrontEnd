@@ -1,18 +1,24 @@
-document.getElementById("usuario").addEventListener("submit", function(event) {
+document.getElementById("espaciodeportivodeporte").addEventListener("submit", function(event) {
     event.preventDefault();
 
     // Captura los valores de los campos
-    const EDDC_ED_Id = document.getElementById("EDDC_ED_Id").value;
-    const EDDC_DC_Id = document.getElementById("EDDC_DC_Id").value;
+    const EDDepor_ED_Id = document.getElementById("EDDepor_ED_Id").value;
+    const EDDepor_Depor_Id = document.getElementById("EDDepor_Depor_Id").value;
+
+    // Validación: Asegurarse de que ambos campos tengan valores
+    if (!EDDepor_ED_Id || !EDDepor_Depor_Id) {
+        alert("Por favor, complete ambos campos");
+        return;
+    }
 
     // Crea un objeto con los datos que se enviarán a la API
     const dataToSend = {
-        EDDC_ED_Id: EDDC_ED_Id,
-        EDDC_DC_Id: EDDC_DC_Id
+        EDDepor_ED_Id: EDDepor_ED_Id,
+        EDDepor_Depor_Id: EDDepor_Depor_Id
     };
 
     // Realiza una solicitud POST a la API utilizando fetch
-    fetch("http://localhost:3000/api/espaciodeportivodatosclimaticos", {
+    fetch("http://localhost:3000/api/espaciodeportivodeporte", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -24,8 +30,8 @@ document.getElementById("usuario").addEventListener("submit", function(event) {
         console.log("Respuesta de la API:", data);
 
         // Si la inserción fue exitosa, vacía los campos
-        document.getElementById("EDDC_ED_Id").value = "";
-        document.getElementById("EDDC_DC_Id").value = "";
+        document.getElementById("EDDepor_ED_Id").value = "";
+        document.getElementById("EDDepor_Depor_Id").value = "";
 
         alert("Datos enviados correctamente");
         
@@ -38,9 +44,10 @@ document.getElementById("usuario").addEventListener("submit", function(event) {
     });
 });
 
+
 function cargarTabla() {
     // Hacer una solicitud GET a la API del backend
-    fetch('http://localhost:3000/api/espaciodeportivodatosclimaticos')
+    fetch('http://localhost:3000/api/espaciodeportivodeporte')
         .then(response => response.json())
         .then(data => {
             // Crear una tabla para mostrar los datos
@@ -48,17 +55,17 @@ function cargarTabla() {
             table.innerHTML = `
                 <thead>
                     <tr>
-                        <th>EDDC_Id</th>
-                        <th>EDDC_ED_Id</th>
-                        <th>EDDC_DC_Id</th>
+                        <th>EDDepor_Id</th>
+                        <th>EDDepor_ED_Id</th>
+                        <th>EDDepor_Depor_Id</th>
                     </tr>
                 </thead>
                 <tbody>
                     ${data.map(item => `
                     <tr>
-                        <td>${item.EDDC_Id}</td>
-                        <td>${item.EDDC_ED_Id}</td>
-                        <td>${item.EDDC_DC_Id}</td>
+                        <td>${item.EDDepor_Id}</td>
+                        <td>${item.EDDepor_ED_Id}</td>
+                        <td>${item.EDDepor_Depor_Id}</td>
                     </tr>
                     `).join('')}
                 </tbody>
