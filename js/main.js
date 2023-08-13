@@ -1,3 +1,9 @@
+document.getElementById("btn-limpiar").addEventListener("click", function(event) {
+    document.getElementById("nombreUsuario").value = "";
+    document.getElementById("emailUsuario").value = "";
+    document.getElementById("passwordUsuario").value = "";
+});
+
 // TABLA USUARIOS
 // document.addEventListener("DOMContentLoaded", () => {
 const contenidoElement = document.getElementById("contenido");

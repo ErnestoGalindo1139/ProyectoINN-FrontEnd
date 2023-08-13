@@ -1,3 +1,12 @@
+document.getElementById("btn-limpiar").addEventListener("click", function(event) {
+    document.getElementById("idRecoM").value = "";
+    document.getElementById("temperaturaDC").value = "";
+    document.getElementById("humedadDC").value = "";
+    document.getElementById("nivelLluviaDC").value = "";
+    document.getElementById("indiceUV").value = "";
+    document.getElementById("idRecoPDC").value = "";
+});
+
 document.getElementById("usuario").addEventListener("submit", function(event) {
     event.preventDefault();
 

@@ -1,3 +1,8 @@
+document.getElementById("btn-limpiar").addEventListener("click", function(event) {
+    document.getElementById("EDDC_ED_Id").value = "";
+    document.getElementById("EDDC_DC_Id").value = "";
+});
+
 document.getElementById("usuario").addEventListener("submit", function(event) {
     event.preventDefault();
 

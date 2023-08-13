@@ -1,3 +1,7 @@
+document.getElementById("btn-limpiar").addEventListener("click", function(event) {
+    document.getElementById("nombreDeporte").value = "";
+});
+
 // Tabla Deporte
 const contenidoElementDeporte = document.getElementById("contenidoDeporte");
 

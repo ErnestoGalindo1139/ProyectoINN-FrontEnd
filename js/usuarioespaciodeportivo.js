@@ -1,29 +1,29 @@
 document.getElementById("btn-limpiar").addEventListener("click", function(event) {
-    document.getElementById("EDDepor_ED_Id").value = "";
-    document.getElementById("EDDepor_Depor_Id").value = "";
+    document.getElementById("UED_Uio_Id").value = "";
+    document.getElementById("UED_ED_Id").value = "";
 });
 
-document.getElementById("espaciodeportivodeporte").addEventListener("submit", function(event) {
+document.getElementById("usuarioespaciodeportivo").addEventListener("submit", function(event) {
     event.preventDefault();
 
     // Captura los valores de los campos
-    const EDDepor_ED_Id = document.getElementById("EDDepor_ED_Id").value;
-    const EDDepor_Depor_Id = document.getElementById("EDDepor_Depor_Id").value;
+    const UED_Uio_Id = document.getElementById("UED_Uio_Id").value;
+    const UED_ED_Id = document.getElementById("UED_ED_Id").value;
 
     // Validación: Asegurarse de que ambos campos tengan valores
-    if (!EDDepor_ED_Id || !EDDepor_Depor_Id) {
+    if (!UED_Uio_Id || !UED_ED_Id) {
         alert("Por favor, complete ambos campos");
         return;
     }
 
     // Crea un objeto con los datos que se enviarán a la API
     const dataToSend = {
-        EDDepor_ED_Id: EDDepor_ED_Id,
-        EDDepor_Depor_Id: EDDepor_Depor_Id
+        UED_Uio_Id: UED_Uio_Id,
+        UED_ED_Id: UED_ED_Id
     };
 
     // Realiza una solicitud POST a la API utilizando fetch
-    fetch("http://localhost:3000/api/espaciodeportivodeporte", {
+    fetch("http://localhost:3000/api/usuarioespaciodeportivo", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -35,8 +35,8 @@ document.getElementById("espaciodeportivodeporte").addEventListener("submit", fu
         console.log("Respuesta de la API:", data);
 
         // Si la inserción fue exitosa, vacía los campos
-        document.getElementById("EDDepor_ED_Id").value = "";
-        document.getElementById("EDDepor_Depor_Id").value = "";
+        document.getElementById("UED_Uio_Id").value = "";
+        document.getElementById("UED_ED_Id").value = "";
 
         alert("Datos enviados correctamente");
         
@@ -52,7 +52,7 @@ document.getElementById("espaciodeportivodeporte").addEventListener("submit", fu
 
 function cargarTabla() {
     // Hacer una solicitud GET a la API del backend
-    fetch('http://localhost:3000/api/espaciodeportivodeporte')
+    fetch('http://localhost:3000/api/usuarioespaciodeportivo')
         .then(response => response.json())
         .then(data => {
             // Crear una tabla para mostrar los datos
@@ -60,17 +60,17 @@ function cargarTabla() {
             table.innerHTML = `
                 <thead>
                     <tr>
-                        <th>EDDepor_Id</th>
-                        <th>EDDepor_ED_Id</th>
-                        <th>EDDepor_Depor_Id</th>
+                        <th>UED_Id</th>
+                        <th>UED_Uio_Id</th>
+                        <th>UED_ED_Id</th>
                     </tr>
                 </thead>
                 <tbody>
                     ${data.map(item => `
                     <tr>
-                        <td>${item.EDDepor_Id}</td>
-                        <td>${item.EDDepor_ED_Id}</td>
-                        <td>${item.EDDepor_Depor_Id}</td>
+                        <td>${item.UED_Id}</td>
+                        <td>${item.UED_Uio_Id}</td>
+                        <td>${item.UED_ED_Id}</td>
                     </tr>
                     `).join('')}
                 </tbody>

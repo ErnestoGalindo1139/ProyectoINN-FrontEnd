@@ -1,3 +1,8 @@
+document.getElementById("btn-limpiar").addEventListener("click", function(event) {
+    document.getElementById("nombreRecomendacionMensaje").value = "";
+});
+
+
 // Tabla EspacioDeportivo
 const contenidoElementRecomendacionMensaje = document.getElementById("contenidoRecomendacionMensaje");
 
