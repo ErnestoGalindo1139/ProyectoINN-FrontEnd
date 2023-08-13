@@ -5,7 +5,7 @@ body {
 }
 
 .contenido {
-    max-width: 800px;
+    width: min(80em, 100%);
     margin: 2em auto 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -47,9 +47,8 @@ tr:hover {
 @media (min-width: 768px) {
     .contenido {
         margin: 4rem auto 10rem auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 2rem;
+        display: flex;
+        justify-content: center;
     }
 }
 
