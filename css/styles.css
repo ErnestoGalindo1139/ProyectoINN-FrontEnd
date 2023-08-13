@@ -145,7 +145,7 @@ tr:hover {
 
 .btn-submit:hover {
     cursor: pointer;
-    background-color: rgb(85, 92, 174);
+    background-color: rgb(53, 60, 141);
 }
 
 .btn-submit:active {
@@ -153,6 +153,17 @@ tr:hover {
 }
 
 .btn-limpiar {
+    background-color: rgb(35, 172, 51);
+    padding: .8rem;
+    border-radius: .5rem;
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 1.5rem;
+    
+}
+
+.btn-borrar {
     background-color: rgb(233, 63, 41);
     padding: .8rem;
     border-radius: .5rem;
@@ -163,7 +174,40 @@ tr:hover {
     
 }
 
+.btn-consultar{
+    background-color: rgb(38, 147, 181);
+    padding: .8rem;
+    border-radius: .5rem;
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 1.5rem;
+    
+}
+.btn-modificar {
+    background-color: rgb(167, 142, 42);
+    padding: .8rem;
+    border-radius: .5rem;
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 1.5rem;
+    
+}
+
 @media (min-width: 768px) {
+    .btn-borrar {
+        margin-left: 6rem;
+    }
+
+    .btn-consultar {
+        margin-left: 6rem;
+    }
+
+    .btn-modificar {
+        margin-left: 6rem;
+    }
+    
     .btn-limpiar {
         margin-left: 6rem;
     }
@@ -175,9 +219,50 @@ tr:hover {
 
 .btn-limpiar:hover {
     cursor: pointer;
-    background-color: rgb(232, 82, 62);
+    background-color: rgb(50, 144, 61);
+}
+
+.btn-borrar:hover {
+    cursor: pointer;
+    background-color: rgb(200, 59, 41);
+}
+
+.btn-consultar:hover {
+    cursor: pointer;
+    background-color: rgb(35, 127, 155);
+}
+
+.btn-modificar:hover {
+    cursor: pointer;
+    background-color: rgb(140, 119, 36);
+}
+
+.btn-borrar:active {
+    transform: scale(0.98);
+}
+
+.btn-consultar:active {
+    transform: scale(0.98);
+}
+
+.btn-modificar:active {
+    transform: scale(0.98);
 }
 
 .btn-limpiar:active {
     transform: scale(0.98);
+}
+
+#consultar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6rem 0 4rem 0;
+}
+
+#btn-consultar__Contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
 }
