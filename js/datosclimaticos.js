@@ -49,14 +49,14 @@ document.getElementById("usuario").addEventListener("submit", function(event) {
         alert("Datos enviados correctamente");
         
         // Actualizar la tabla con los nuevos datos
-        
+        cargarTabla();
     })
     .catch(error => {
         console.error("Error al enviar los datos:", error);
         alert("Ocurrió un error al enviar los datos");
     });
 });
-cargarTabla();
+
 function cargarTabla() {
     // Hacer una solicitud GET a la API del backend
     fetch('http://localhost:3000/api/datosclimaticos')
