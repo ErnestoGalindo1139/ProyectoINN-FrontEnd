@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto INN</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+
+    <div id="contenido" class="contenido">
+        <!-- Aquí se reflejará el contenido -->
+    </div>
+
+    <form id="usuario" class="formulario">
+
+        <div class="campoFormulario">
+            <label for="EDDC_ED_Id">EDDC_ED_Id:</label>
+            <input type="number" id="EDDC_ED_Id" class="inputFormulario" placeholder="Introduzca el EDDC_ED_Id" name="EDDC_ED_Id" required>
+        </div>
+        
+        <div class="campoFormulario">
+            <label for="EDDC_DC_Id">EDDC_DC_Id:</label>
+            <input type="number" id="EDDC_DC_Id" class="inputFormulario" name="EDDC_DC_Id" placeholder="Introduzca el EDDC_DC_Id" required>
+        </div>
+
+        <div id="botonesDevolucion" class="botonesFormulario">
+            <input id="btn-submit" class="btn-submit" type="submit" value="Enviar Formulario">
+            <button id="btn-limpiar" class="btn-limpiar">Limpiar</button>
+        </div>
+
+    </form>
+    
+    <script type="module" src="js/espaciodeportivodatosclimaticos.js"></script>
+
+</body>
+</html>
