@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto INN</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <a class="boton-regresar" href="index.html">
+        <img src="img/atras.png" alt="Volver.png">
+    </a>
+
+    <div id="contenido" class="contenido">
+        <!-- Aquí se reflejará el contenido -->
+    </div>
+
+    <form id="consultaEspacioDeportivo" class="formulario">
+        <div class="fechaConsultas">
+            <div class="campoFormulario">
+                <label id="selectMes__label" for="selectEspacioDeportivo">Seleccione un Espacio Deportivo:</label>
+                <select id="selectEspacioDeportivo" name="mes">
+                    <option selected disabled>Selecciona una opcion:</option>
+                    <option value="Cancha1Fut">Cancha1Fut</option>
+                    <option value="Cancha2Fut">Cancha2Fut</option>
+                    <option value="Cancha3Fut">Cancha3Fut</option>
+                    <option value="Cancha1Beis">Cancha1Beis</option>
+                    <option value="Cancha2Beis">Cancha2Beis</option>
+                    <option value="Cancha1Basquet">Cancha1Basquet</option>
+                    <option value="Cancha2Basquet">Cancha2Basquet</option>
+                    <option value="Pista">Pista</option>
+                </select>
+            </div>
+        </div>
+        
+        <div id="btn-consultaEspacio__contenedor">
+            <a id="btn-consultaEspacio" class="btn-consultaEspacio">Ejecutar</a>
+
+        </div>
+    </form>
+    
+    
+    <script type="module" src="js/consultaEspacioDeportivo.js"></script>
+
+</body>
+</html>
