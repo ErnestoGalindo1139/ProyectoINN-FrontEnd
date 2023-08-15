@@ -194,6 +194,15 @@ tr:hover {
     font-size: 1.5rem;
     
 }
+.btn-consultaMes {
+    background-color: rgb(43, 83, 148);
+    padding: .8rem;
+    border-radius: .5rem;
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 1.5rem;
+}
 
 @media (min-width: 768px) {
     .btn-borrar {
@@ -213,6 +222,10 @@ tr:hover {
     }
 
     .btn-submit {
+        margin-left: 1rem;
+    }
+
+    .btn-consultaMes {
         margin-left: 1rem;
     }
 }
@@ -237,6 +250,11 @@ tr:hover {
     background-color: rgb(140, 119, 36);
 }
 
+.btn-consultaMes:hover {
+    cursor: pointer;
+    background-color: rgb(77, 108, 157);
+}
+
 .btn-borrar:active {
     transform: scale(0.98);
 }
@@ -250,6 +268,10 @@ tr:hover {
 }
 
 .btn-limpiar:active {
+    transform: scale(0.98);
+}
+
+.btn-consultaMes:active {
     transform: scale(0.98);
 }
 
@@ -390,3 +412,20 @@ a img {
 .descripcion {
     font-size: 1.5rem;
 }
+
+#consultaMes {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: min(20em, 100%);
+    gap: 3em;
+}
+
+#inputAnio {
+    margin-bottom: 2em;
+}
+
+#btn-consultaMes__contenedor {
+    text-align: center;
+}
+
