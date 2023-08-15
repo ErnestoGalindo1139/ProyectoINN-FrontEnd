@@ -214,6 +214,16 @@ tr:hover {
     font-size: 1.5rem;
 }
 
+.btn-Fecha {
+    background-color: rgb(43, 83, 148);
+    padding: .8rem;
+    border-radius: .5rem;
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 1.5rem;
+}
+
 @media (min-width: 768px) {
     .btn-borrar {
         margin-left: 6rem;
@@ -270,6 +280,11 @@ tr:hover {
     background-color: rgb(77, 108, 157);
 }
 
+.btn-Fecha:hover {
+    cursor: pointer;
+    background-color: rgb(77, 108, 157);
+}
+
 .btn-borrar:active {
     transform: scale(0.98);
 }
@@ -291,6 +306,10 @@ tr:hover {
 }
 
 .btn-consultaEspacio:active {
+    transform: scale(0.98);
+}
+
+.btn-Fecha:active {
     transform: scale(0.98);
 }
 
@@ -457,6 +476,10 @@ a img {
 }
 
 #btn-consultaEspacio__contenedor {
+    text-align: center;
+}
+
+#btn-Fecha__contenedor {
     text-align: center;
 }
 
